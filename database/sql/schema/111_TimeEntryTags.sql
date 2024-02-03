@@ -1,3 +1,6 @@
+USE Yupti;
+GO
+
 CREATE TABLE TimeEntryTags (
     TimeEntryID INT NOT NULL,
     TagID INT NOT NULL,

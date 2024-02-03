@@ -1,3 +1,6 @@
+USE Yupti;
+GO
+
 CREATE TABLE TimeEntries (
     TimeEntryID INT IDENTITY PRIMARY KEY,
     ProjectID INT NOT NULL,

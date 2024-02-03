@@ -1,7 +1,7 @@
 USE Yupti;
 GO
 
-CREATE LOGIN svc_yupti_dev WITH PASSWORD = 'QmlnUG9wZUZyYW5jbyE=';
+CREATE LOGIN svc_yupti_dev WITH PASSWORD = 'QmlnUG9wZUZyYW5jbyE';
 GO
 
 CREATE USER svc_yupti_dev FOR LOGIN svc_yupti_dev;

@@ -1,3 +1,6 @@
+USE Yupti;
+GO
+
 CREATE TABLE Projects (
     ProjectID INT IDENTITY PRIMARY KEY,
     ClientID INT NOT NULL,

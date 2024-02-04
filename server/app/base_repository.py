@@ -1,5 +1,6 @@
+from sqlalchemy import update
 from app.database import engine
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, selectinload
 
 class BaseRepository:
     def __init__(self, model):
@@ -17,7 +18,7 @@ class BaseRepository:
         entity = self.get_by_id(id)
 
         if hasattr(entity, 'is_deleted'):
-            entity.is_deleted = True
+            entity.is_deleted = True    # Todo: replace this with same logic as in update statement
             with Session(engine) as session:
                 session.commit()
         else:
@@ -26,15 +27,13 @@ class BaseRepository:
                 session.commit()
 
     def update(self, id, data):
-        entity = self.get_by_id(id)
-
-        for key, value in data.items():
-            setattr(entity, key, value)
+        statement = update(self.model).where(self.model.id == id).values(data)
 
         with Session(engine) as session:
+            session.execute(statement)
             session.commit()
-        
-        return entity
+
+        return self.get_by_id(id)
     
     def create(self, entity):
         with Session(engine) as session:

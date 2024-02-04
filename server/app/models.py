@@ -25,7 +25,7 @@ class Client(Base):
 
 class Project(Base):
     __tablename__ = 'Projects'
-    project_id: Mapped[int] = mapped_column('ProjectID', primary_key=True)
+    id: Mapped[int] = mapped_column('ProjectID', primary_key=True)
 
     name: Mapped[str]
     description: Mapped[str]
@@ -37,7 +37,7 @@ class Project(Base):
 
     def to_dict(self):
         return {
-            'id': self.project_id,
+            'id': self.id,
             'client_id': self.client_id,
             'name': self.name,
             'description': self.description,

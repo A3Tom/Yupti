@@ -1,20 +1,31 @@
 @baseUrl = http://localhost:5000
 
+### Get all projects
+GET {{baseUrl}}/projects
+
+### Get a single project 
+GET {{baseUrl}}/projects/1
+
+### Create a new project
 POST {{baseUrl}}/projects
 Content-Type: application/json
 
 {
-    "client_id": "1",
-    "name": "Ostrich Farm",
-    "description": "Mate ostriches are fuckin quality big bastards",
+    "client_id": 1,
+    "name": "Keepin them ostriches in check",
+    "description": "Mate ostriches are fuckin quality big bastards but my fuck are they unruly",
     "start_date": "2023-05-24 00:00:00.000"
 }
 
-### Get project by id endpoint
-GET {{baseUrl}}/projects/3
 
-### Delete project endpoint
-DELETE {{baseUrl}}/projects/6
+### Update a project
+PUT {{baseUrl}}/projects/1022
+Content-Type: application/json
 
-### Joins test url
-GET {{baseUrl}}/joins
+{
+    "name": "Keepin the humans in line",
+    "description": "The ostriches have assumed control. I repeat, the ostriches have assumed control"
+}
+
+### Delete project 
+DELETE {{baseUrl}}/projects/1022

@@ -1,0 +1,30 @@
+@baseUrl = http://localhost:5000
+
+### Get all clients
+GET {{baseUrl}}/clients
+
+
+### Get a single client
+GET {{baseUrl}}/clients/24
+
+
+### Create a new client
+POST {{baseUrl}}/clients
+Content-Type: application/json
+
+{
+    "name": "Ostritch Wranglers 555"
+}
+
+
+### Update a client
+PUT {{baseUrl}}/clients/27
+Content-Type: application/json
+
+{
+    "name": "Ostritch Wranglers 556"
+}
+
+
+### Delete a client
+DELETE {{baseUrl}}/clients/27

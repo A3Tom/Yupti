@@ -1,0 +1,20 @@
+@baseUrl = http://localhost:5000
+
+POST {{baseUrl}}/projects
+Content-Type: application/json
+
+{
+    "client_id": "1",
+    "name": "Ostrich Farm",
+    "description": "Mate ostriches are fuckin quality big bastards",
+    "start_date": "2023-05-24 00:00:00.000"
+}
+
+### Get project by id endpoint
+GET {{baseUrl}}/projects/3
+
+### Delete project endpoint
+DELETE {{baseUrl}}/projects/6
+
+### Joins test url
+GET {{baseUrl}}/joins

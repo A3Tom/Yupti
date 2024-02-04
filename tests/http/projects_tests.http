@@ -4,7 +4,10 @@
 GET {{baseUrl}}/projects
 
 ### Get a single project 
-GET {{baseUrl}}/projects/1
+GET {{baseUrl}}/projects/1022
+
+### Get a single project with relationships loaded
+GET {{baseUrl}}/projects/1022/detail
 
 ### Create a new project
 POST {{baseUrl}}/projects
@@ -19,13 +22,13 @@ Content-Type: application/json
 
 
 ### Update a project
-PUT {{baseUrl}}/projects/1022
+PUT {{baseUrl}}/projects/3
 Content-Type: application/json
 
 {
     "name": "Keepin the humans in line",
-    "description": "The ostriches have assumed control. I repeat, the ostriches have assumed control"
+    "description": "Attention all planets of the solar federation; The ostriches have assumed control. I repeat, the ostriches have assumed control"
 }
 
-### Delete project 
+### Delete project
 DELETE {{baseUrl}}/projects/1022

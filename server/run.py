@@ -1,12 +1,11 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from config import Config
+from instance.config import Config
+from app.clients.routes import clients_bp
 
 app = Flask(__name__)
 app.config.from_object(Config)
-db = SQLAlchemy(app)
 
-from app.routes import *
+app.register_blueprint(clients_bp, url_prefix='/clients')
 
 if __name__ == '__main__':
     app.run(debug=True)

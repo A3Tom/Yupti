@@ -27,9 +27,14 @@ def get_project(id):
     project = projects_repo.get_by_id(id)
     return jsonify({'id': project.id, 'name': project.name}), 200
 
+@projects_bp.route('/<int:id>/detail', methods=['GET'])
+def get_project_detail(id):
+    project = projects_repo.get_by_id_detail(id)
+    return jsonify({'id': project.id, 'name': project.name, 'client': project.client.name}), 200
+
 @projects_bp.route('/<int:id>', methods=['PUT'])
 def update_project(id):
-    project = projects_repo.update(id, request.get_json())    
+    project = projects_repo.update(id, request.get_json())
     return jsonify({'id': project.id, 'name': project.name}), 200
 
 @projects_bp.route('/<int:id>', methods=['DELETE'])

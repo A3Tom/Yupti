@@ -5,7 +5,7 @@ A permy question in ma life; I've always been shanner at trackin time so I wante
 
 ## Tech stack
 
-- MSSql Server
+- Docker / MSSql Server
 - Python 3.x
 - Vue 3
 
@@ -26,9 +26,14 @@ A permy question in ma life; I've always been shanner at trackin time so I wante
 - [ ] Exportable time entries
 - [ ] API Unit tests
 - [ ] Front end unit tests
+- [ ] A timeline view of time entries by day
+- [ ] A timeline view of time entries for the week
 
 ### Super Bonus Points
 - [ ] CI/CD pipeline - look ano this is low hanging fruit but the bonus points are lookin heavy crowded
 - [ ] Development environment deployment target
 - [ ] A themed site, wit a pipe dream I know but am aiming for it
 - [ ] E2E test suite
+
+
+## Getting Started

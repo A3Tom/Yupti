@@ -12,8 +12,8 @@ A permy question in ma life; I've always been shanner at trackin time so I wante
 ## So what am a buildin here ?
 
 ### MVP
-- [ ] Must be able to add clients
-- [ ] Must be able to add projects related to clients
+- [X] Must be able to add clients
+- [X] Must be able to add projects related to clients
 - [ ] Ability to add a time entry with a start & end datetime via API and Web
 - [ ] Ability to list time entries
 - [ ] All entities must be editable

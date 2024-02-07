@@ -1,0 +1,32 @@
+@baseUrl = http://localhost:5000
+
+### Get all projects
+GET {{baseUrl}}/timeentries
+
+### Get a single project 
+GET {{baseUrl}}/timeentries/2
+
+### Get a single project with relationships loaded
+GET {{baseUrl}}/timeentries/2/detail
+
+### Create a new project
+POST {{baseUrl}}/timeentries
+Content-Type: application/json
+
+{
+    "project_id" : "1019",
+    "description" : "Checkin up on them ostritches",
+    "start_time" : "2024-02-07 09:00:00.000",
+    "end_time" : "2024-02-07 12:00:00.000"
+}
+
+### Update a project
+PUT {{baseUrl}}/timeentries/2
+Content-Type: application/json
+
+{
+    "start_time" : "2024-02-07 10:30:00.420"
+}
+
+### Delete project
+DELETE {{baseUrl}}/timeentries/2

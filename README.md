@@ -20,21 +20,26 @@ A permy question in ma life; I've always been shanner at trackin time so I wante
 - [ ] An actual workin webpage
 
 ### Bonus Points
-- [ ] User accounts with logins
-- [ ] User Timezone info (who knew that'd be important in an app entirely focused around time...)
-- [ ] Time entries tags
+- [X] Time entries tags
 - [ ] List time entries by tag
+- [ ] User accounts with logins
+- [ ] User logins linked to an OAuth 2 federation
+- [ ] User Timezone info (who knew that'd be important in an app entirely focused around time...)
 - [ ] Exportable time entries
 - [ ] API Unit tests
 - [ ] Front end unit tests
 - [ ] A timeline view of time entries by day
 - [ ] A timeline view of time entries for the week
+- [ ] Containerization of the server
 
 ### Super Bonus Points
 - [ ] CI/CD pipeline - look ano this is low hanging fruit but the bonus points are lookin heavy crowded
+- [ ] Terraform IaC
+- [ ] Multi cloud deployment targets (Azure + AWS are my chosen two)
 - [ ] Development environment deployment target
 - [ ] A themed site, wit a pipe dream I know but am aiming for it
 - [ ] E2E test suite
+- [ ] Kubernetes orchestration of server
 
 
 ## Getting Started

@@ -21,6 +21,7 @@ A permy question in ma life; I've always been shanner at trackin time so I wante
 
 ### Bonus Points
 - [ ] User accounts with logins
+- [ ] User Timezone info (who knew that'd be important in an app entirely focused around time...)
 - [ ] Time entries tags
 - [ ] List time entries by tag
 - [ ] Exportable time entries

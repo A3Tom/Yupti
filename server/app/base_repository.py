@@ -1,3 +1,4 @@
+from sqlalchemy import select
 from sqlalchemy import update
 from app.database import engine
 from sqlalchemy.orm import Session, selectinload
@@ -9,10 +10,19 @@ class BaseRepository:
     def get_all(self):
         with Session(engine) as session:
             return session.query(self.model).all()
+        
+    def exists(self, id):
+        with Session(engine) as session:
+            return session.query(self.model).filter(self.model.id == id).count() > 0
 
     def get_by_id(self, id):
         with Session(engine) as session:
             return session.query(self.model).get(id)
+        
+    def get_by_id_detail(self, id):
+        with Session(engine) as session:
+            stmt = select(self.model).options(selectinload("*")).filter(self.model.id == id)
+            return session.scalars(stmt).first()
         
     def delete(self, id):
         entity = self.get_by_id(id)
@@ -25,6 +35,8 @@ class BaseRepository:
             with Session(engine) as session:
                 session.delete(entity)
                 session.commit()
+                
+        return True
 
     def update(self, id, data):
         statement = update(self.model).where(self.model.id == id).values(data)

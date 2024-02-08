@@ -1,0 +1,30 @@
+@baseUrl = http://localhost:5000
+
+### Get all tags
+GET {{baseUrl}}/tags
+
+### Get a single tag 
+GET {{baseUrl}}/tags/2
+
+### Get all time entries for a given tag id
+GET {{baseUrl}}/tags/2/timeentries
+
+### Create a new tag
+POST {{baseUrl}}/tags
+Content-Type: application/json
+
+{
+    "name": "Remoin"
+}
+
+
+### Update a tag
+PUT {{baseUrl}}/tags/2
+Content-Type: application/json
+
+{
+    "name": "Being remo'd"
+}
+
+### Delete tag
+DELETE {{baseUrl}}/tags/1

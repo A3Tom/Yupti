@@ -21,7 +21,7 @@ A permy question in ma life; I've always been shanner at trackin time so I wante
 
 ### Bonus Points
 - [X] Time entries tags
-- [ ] List time entries by tag
+- [X] List time entries by tag
 - [ ] User accounts with logins
 - [ ] User logins linked to an OAuth 2 federation
 - [ ] User Timezone info (who knew that'd be important in an app entirely focused around time...)

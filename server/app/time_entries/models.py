@@ -1,8 +1,10 @@
 import datetime
+from typing import List
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.database import Base
 from app.projects.models import Project
+from app.tags.models import timeentry_tag_association_table, Tag
 
 class TimeEntry(Base):
     __tablename__ = 'TimeEntries'
@@ -14,6 +16,10 @@ class TimeEntry(Base):
 
     project_id: Mapped[int] = mapped_column('ProjectID', ForeignKey("Projects.ProjectID"))
     project: Mapped["Project"] = relationship(Project, backref="time_entries")
+
+    tags: Mapped[List[Tag]] = relationship(
+        secondary=timeentry_tag_association_table, back_populates="time_entries"
+    )
 
     def to_dict(self):
         return {

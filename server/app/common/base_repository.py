@@ -1,7 +1,6 @@
-from sqlalchemy import select
-from sqlalchemy import update
-from app.database import engine
+from sqlalchemy import select, update
 from sqlalchemy.orm import Session, selectinload
+from .database import engine
 
 class BaseRepository:
     def __init__(self, model):

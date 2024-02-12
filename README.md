@@ -22,8 +22,9 @@ A permy question in ma life; I've always been shanner at trackin time so I wante
 ### Bonus Points
 - [X] Time entries tags
 - [X] List time entries by tag
-- [ ] User accounts with logins
-- [ ] User logins linked to an OAuth 2 federation
+- [X] User accounts with logins
+- [X] User logins linked to an OAuth 2 federation (implemeneted using AWS Cognito)
+- [ ] Users info stored in database
 - [ ] User Timezone info (who knew that'd be important in an app entirely focused around time...)
 - [ ] Exportable time entries
 - [ ] API Unit tests
@@ -40,6 +41,8 @@ A permy question in ma life; I've always been shanner at trackin time so I wante
 - [ ] A themed site, wit a pipe dream I know but am aiming for it
 - [ ] E2E test suite
 - [ ] Kubernetes orchestration of server
+- [ ] User Roles & Groups
+- [ ] Organisational workspace to contain all this malarkey within it
 
 
 ## Getting Started

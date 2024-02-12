@@ -2,3 +2,4 @@ Flask
 Flask-SQLAlchemy
 pymssql
 python-dotenv
+boto3

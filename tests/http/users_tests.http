@@ -1,0 +1,12 @@
+@baseUrl = http://localhost:5000
+
+### Create a new user
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+    "name": "Tycho Brahe",
+    "username": "TychoBraheNumberWan",
+    "password": "SeeThatFuckinAlkyElk!1580",
+    "email": "RemoAwTheWayHame@gmail.com"    
+}

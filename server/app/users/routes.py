@@ -24,8 +24,10 @@ def create_user():
     confirmed = cog_wrapper.sign_up_user(
         create_user.username,
         create_user.password, 
-        create_user.email)
+        create_user.email,
+        )
 
+    # Hawd the bus ! This works, confirmed == False due to needing email verification
     if not confirmed:
         return make_response(jsonify({"error": "Error when creating the user"}), 400)
     

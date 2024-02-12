@@ -11,16 +11,16 @@ class CreateUserDTO:
         self.name = name
 
 
-class User(Base):
-    # __tablename__ = 'Users'
-    # id: Mapped[int] = mapped_column('UserID', primary_key=True)
+# class User(Base):
+#     # __tablename__ = 'Users'
+#     # id: Mapped[int] = mapped_column('UserID', primary_key=True)
 
-    username: Mapped[str] = mapped_column()
-    email: Mapped[str] = mapped_column()
-    confirmed: Mapped[bool] = mapped_column()
+#     username: Mapped[str] = mapped_column()
+#     email: Mapped[str] = mapped_column()
+#     confirmed: Mapped[bool] = mapped_column()
 
-    def __init__(self, createdUser: CreateUserDTO):
-        self.username = createdUser.username
-        self.email = createdUser.email
-        self.name = createdUser.name
-        self.confirmed = True
+#     def __init__(self, createdUser: CreateUserDTO):
+#         self.username = createdUser.username
+#         self.email = createdUser.email
+#         self.name = createdUser.name
+#         self.confirmed = True

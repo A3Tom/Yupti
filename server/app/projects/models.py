@@ -1,7 +1,7 @@
 import datetime
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-from app.database import Base
+from app.common.database import Base
 from app.clients.models import Client
 
 class Project(Base):

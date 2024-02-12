@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Mapped, mapped_column
-from app.database import Base
+from app.common.database import Base
 
 class Client(Base):
     __tablename__ = 'Clients'

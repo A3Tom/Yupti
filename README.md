@@ -49,7 +49,7 @@ A permy question in ma life; I've always been shanner at trackin time so I wante
 
 First up; get the SQL Server docker image on the go, it's the quickest and least painful way 
 ```bash
-docker build -t yupti-infrastructure .\database\sql\Dockerfile
+docker build -t yupti-infrastructure .\database\sql\
 docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=ThePopeRunsTheR3m0' -p 1433:1433 --name YuptiInfra -d yupti-infrastructure
 ```
 
@@ -61,6 +61,7 @@ Create a new py `venv` and install the requirements
 
 ```bash
 py -m venv venv
+venv\Scripts\activate.bat
 pip install -r server\requirements.txt 
 ```
 
